@@ -1,0 +1,809 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  background-color:#009e49;;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* تعديل الشعار ليصبح دائري وبسيط */
+.navbar .logo img {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  border-radius: 50%; /* جعل الشعار دائري */
+  object-fit: cover; /* لضمان أن الصورة تتناسب مع الدائرة */
+  border: none; /* إزالة أي إطار حول الشعار */
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.menu-btn.active .bar1 {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.menu-btn.active .bar2 {
+  opacity: 0;
+}
+
+.menu-btn.active .bar3 {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-itm {
+  padding: 10px 15px;
+  margin-left: 10px;
+}
+
+.navbar .list a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
+
+.navbar .nav-itm:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+/* تصميم متجاوب للشاشات المتوسطة والصغيرة */
+@media (max-width: 890px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(246, 246, 248);
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    right: 0;
+    z-index: 1000;
+  }
+
+  .list.active {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  .navbar .logo {
+    margin-right: auto;
+  }
+
+  body {
+    background-color: rgb(253, 254, 255);
+  }
+
+  .navbar {
+    background-color: rgb(58, 101, 240);
+  }
+
+  .navbar list a {
+    color: #000;
+  }
+
+  .navbar .nav-itm:hover {
+    background-color: rgb(168, 196, 196);
+  }
+
+  .list a {
+    font-size: 20px;
+  }
+
+  .navbar .nav-itm {
+    padding: 10px 0;
+  }
+}
+section{
+    padding: 50px;
+}
+
+.home img{
+   width: 100%;
+   height: 400px;
+}
+.home{
+  text-align: center;
+}
+.news h1{
+  text-align: center;
+}
+.registration h1{
+  text-align: center;
+}
+.about h1{
+  text-align: center;
+}
+.contact-us {
+  text-align: center;
+}
+.nav-itm {
+  margin-bottom: 15px;
+}
+
+.nav-itm a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.bi {
+  font-size: 22px; /* حجم الأيقونات */
+  color: #007bff; /* لون الأيقونات */
+}
+.hero-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5); /* خلفية شبه شفافة لزيادة وضوح النص */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center; /* لجعل النص متوسّطًا في الشاشات الصغيرة */
+}
+
+.text-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.text-overlay p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* قواعد الوسائط لجعل الشفرة مستجيبة */
+@media (max-width: 768px) {
+  .text-overlay h1 {
+    font-size: 2.5rem; /* تقليل حجم العنوان الرئيسي للشاشات المتوسطة */
+  }
+
+  .text-overlay p {
+    font-size: 1.2rem; /* تقليل حجم الفقرة للشاشات المتوسطة */
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-overlay h1 {
+    font-size: 2rem; /* تقليل حجم العنوان الرئيسي للشاشات الصغيرة */
+  }
+
+  .text-overlay p {
+    font-size: 1rem; /* تقليل حجم الفقرة للشاشات الصغيرة */
+    margin-bottom: 10px;
+  }
+
+  .text-overlay {
+    padding: 15px; /* تقليل الحشوة حول النص للشاشات الصغيرة */
+  }
+}
+
+.cta-button {
+  background-color: #009e49;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+/* تحسين الكروت بشكل حديث */
+.card {
+  border: none;
+  border-radius: 15px; /* إضافة حواف ناعمة للكروت */
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* ظل أعمق لجعل الكارت يبدو بارزًا */
+  transform-style: preserve-3d; /* تفعيل تأثير ثلاثي الأبعاد */
+  will-change: transform;
+}
+
+/* تأثير الحركة مع الانعكاس ثلاثي الأبعاد عند التمرير */
+.card:hover {
+  transform: rotateY(10deg) rotateX(5deg) translateY(-10px); /* تأثير ثلاثي الأبعاد وتحريك للأعلى */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* زيادة الظل */
+}
+
+/* تأثير الحدث عند الصورة */
+.card-img-top {
+  transition: transform 0.5s ease;
+}
+
+/* تحريك الصورة داخل الكارت عند التمرير */
+.card:hover .card-img-top {
+  transform: scale(1.1); /* تكبير الصورة بشكل بسيط */
+}
+
+/* تحسين النصوص بشكل عصري */
+.card-title {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 1px; /* زيادة المسافة بين الأحرف للحصول على مظهر أنيق */
+  text-transform: uppercase; /* تحويل النص إلى حروف كبيرة */
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* تغيير لون العنوان عند التمرير */
+.card:hover .card-title {
+  color: #08a830; /* تغيير اللون إلى أخضر حديث */
+}
+
+/* تنسيق عنوان الأخبار */
+.news-header {
+  text-align: center; /* محاذاة النص في المنتصف */
+  margin: 30px 0; /* مسافة من الأعلى والأسفل */
+}
+
+.news-header h1 {
+  font-family: 'Tajawal', sans-serif; /* الخط المخصص */
+  font-size: 3rem; /* حجم الخط */
+  letter-spacing: 2px; /* توسيع المسافات بين الأحرف */
+  color: #333; /* لون النص */
+  text-transform: uppercase; /* تحويل النص إلى أحرف كبيرة */
+  position: relative; /* لتطبيق تأثير بعد */
+  display: inline-block;
+  padding-bottom: 10px;
+}
+/* إضافة خط سفلي بسيط وحديث */
+.news-header h1::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: green; /* لون الحد السفلي */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+/* تنسيق قسم تسجيل المحتاجين بنفس أسلوب الأخبار */
+.registration h1 {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* إضافة خط سفلي */
+.registration h1::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: green;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* ضبط حاوية المحتوى بحيث تكون في منتصف الصفحة */
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh; /* الارتفاع الكامل للنافذة */
+  margin: 0;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+/* ضبط حجم الصورة */
+.image-section img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-floating {
+  margin-bottom: 20px;
+}
+
+button.send {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: #08a830;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button.send:hover {
+  background-color: #066d25;
+}
+
+/* تصميم responsive للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-section, 
+  .form-section {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .form-section {
+    margin: 0;
+  }
+}
+             .contant-container {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: flex-start;
+              justify-content: space-between;
+              padding: 20px;
+          }
+          .form-section,
+          .image-section {
+              flex: 1;
+              max-width: 50%;
+              padding: 20px;
+          }
+          .image-section img {
+              max-width: 100%;
+              height: auto;
+          }
+          .form-floating {
+              margin-bottom: 1rem;
+          }
+          .send {
+              margin-top: 1rem;
+          }
+  
+          .section:hover {
+            transform: scale(1.02); /* تكبير خفيف عند التمرير */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ظل أعمق عند التمرير */
+          }
+
+/* تنسيق الأقسام */
+.section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+  text-align: right; /* محاذاة النص من اليمين */
+}
+
+.section h2 {
+  font-size: 2em;
+  color: #00b32d;
+  margin-bottom: 15px;
+}
+
+.section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #555;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+/* تنسيق الروابط (إذا كانت موجودة) */
+a {
+  color: #00b327;
+  text-decoration: none;
+}
+
+/* تنسيق النصوص في الهيدر */
+.about {
+  direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+  text-align: right; /* محاذاة النص من اليمين */
+}
+          input, textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          }
+          
+          button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+          }
+          
+          button:hover {
+            background-color: #0056b3;
+          }
+          
+          .contact-info {
+            margin-bottom: 20px;
+          }
+          
+          .contact-info h2 {
+            margin-bottom: 10px;
+          }
+          
+          .image-section {
+            margin-top: 20px;
+          }
+          
+          .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+          }
+        
+
+
+          .about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 30vh; /* يضمن أن القسم يأخذ كامل ارتفاع الشاشة */
+          }
+          
+          .about h1 {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: #333;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+          }
+          
+          .about h1::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: green;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+
+
+
+
+
+
+
+          .contact-us {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+            text-align: center;
+          }
+          
+          .section-header {
+            margin-bottom: 20px;
+          }
+          
+          .section-header h1 {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 2.5rem;
+            color: #222;
+            margin-bottom: 10px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+          }
+          
+          .section-header h1::after {
+            content: '';
+            display: block;
+            height: 4px;
+            width: 60px;
+            background-color:green; /* اللون الأخضر المطلوب */
+            margin: 10px auto 0;
+            border-radius: 2px;
+          }
+          
+          .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
+          
+          form {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 600px;
+          }
+          
+          label {
+            display: block;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 8px;
+          }
+          
+          input[type="text"],
+          input[type="email"],
+          textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+          }
+          
+          input:focus,
+          textarea:focus {
+            border-color: green;
+            outline: none;
+          }
+          
+          textarea {
+            resize: vertical;
+          }
+          
+          button {
+            background-color: rgb(6, 163, 6);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+ button:hover {
+            background-color: #0056b3;
+          }
+   
+
+
+
+
+
+
+          .contact-section {
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .contact-info, .account-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 700px;
+            margin: 20px 0;
+          }
+          
+          h2 {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+          
+          .contact-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 550px;
+            transition: transform 0.3s, box-shadow 0.3s;
+          }
+          
+          .contact-card:hover {
+            transform: translateY(-4px); /* رفع البطاقة عند التمرير */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+          }
+          
+          .icon-circle {
+            background-color: #4CAF50; /* لون عصري للأيقونة */
+            color: #ffffff;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          }
+          
+          .contact-details {
+            text-align: center;
+          }
+          
+          .contact-details p {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            color: #555;
+            margin: 0;
+          }
+          
+          .account-info .contact-card {
+            margin-top: 0;
+          }
+          
+          .account-number {
+            font-weight: bold;
+          }
+          footer {
+            background-color: #009e49; /* اللون الأخضر لشريط الفوتر */
+            color:black; /* اللون الأبيض للنصوص */
+            padding: 20px;
+            text-align: center;
+            position: relative;
+          }
+          
+          .footer-section {
+            margin-bottom: 15px;
+          }
+          
+          .footer-links a {
+            color:black; /* اللون الأبيض للروابط */
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+          }
+          
+          .footer-links a:hover {
+            text-decoration: underline;
+          }
+          
+          .social-icons a {
+            color: #fff; /* اللون الأبيض للأيقونات */
+            margin: 0 15px;
+            transition: color 0.3s, transform 0.3s; /* إضافة تأثيرات الانتقال */
+          }
+          
+          .social-icons a:hover {
+            color: #f0f0f0; /* لون أفتح عند التمرير فوق الأيقونة */
+            transform: scale(1.1); /* تكبير الأيقونة عند التمرير فوقها */
+          }
+          
+          .social-icons a i {
+            font-size: 30px; /* تكبير حجم الأيقونات */
+          }
+          
+          .footer-center p,
+          .designer-name,
+          .footer-section p {
+            margin: 0;
+            font-size: 20px;
+          }
+          
+          .footer-section.designer {
+            font-style: italic;
+          }
+          
+          /* تخصيص الفوتر ليكون على سطور منفصلة */
+          .footer-section {
+            display: block;
+          }
+
+
+
+
+          

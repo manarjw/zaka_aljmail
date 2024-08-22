@@ -1,0 +1,242 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> مكتب الزكاة الجميل </title> 
+    <link rel="stylesheet" href="qrmm.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <head>
+      <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap" rel="stylesheet">
+      <!-- باقي الوسوم في الهيدر مثل: <title>, <meta> ... -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+</head> 
+<body> 
+  <div class="main-content"> 
+    <nav class="navbar"> 
+        <div class="logo"> 
+            <img src="img/photo_2024-07-23_17-39-09.jpg" alt="Logo"> 
+        </div> 
+        <button class="menu-btn" onclick="toggleMenu()"> 
+         
+        <div class="menu-icon"> 
+            <div class="bar bar1"></div> 
+            <div class="bar bar3"></div> 
+        </div> 
+        <div class="close-icon">  
+            <div class="line line1"></div>  
+            <div class="line line2"></div>  
+        </div> 
+    </button>
+      <ul class="list">
+        <li class="nav-itm">
+          <a href="#contact-us"></i> تواصل معنا</a> 
+          <i class="bi bi-envelope"></i>
+          <li class="nav-itm">
+          <a href="#about"></i> معلومات عنا</a>
+          <i class="bi bi-info-circle"></i>
+        </li>
+        <li class="nav-itm">
+          <a href="#registration"></i> تسجيل المحتاجين</a>
+          <i class="bi bi-person-plus"></i>
+        </li>
+        <li class="nav-itm">
+          <a href="#news"></i> أخبارنا</a>
+          <i class="bi bi-newspaper"></i>
+        </li>
+        <li class="nav-itm">
+          <a href="#home"></i> الصفحة الرئيسية</a>
+          <i class="bi bi-house-door"></i>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <section class="home" id="home">
+    <div class="hero-container">
+      <img src="img/photo_2024-08-11_18-21-18.jpg" class="hero-image" alt="Zakat Impact">
+      <div class="text-overlay">
+        <h1>الزكاة نور ورحمة</h1>
+        <p>قال الله تعالى: <br>"وَأَقِيمُوا الصَّلَوٰةَ وَآتُوا الزَّكَوٰةَ..." <br>سورة البقرة، الآية 43</p>
+        <script src="script.js"></script>
+      </div>
+    </div>
+  </section>
+    <section class="news" id="news">
+      <div class="news-header">
+          <h1>أخبارنا</h1>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/الملتقى.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">مقابلات وحوارات</h5>
+              <p class="card-text">نشر مقابلات مع القائمين على المكتب أو المستفيدين لعرض تجاربهم</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/حملة2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">الأنشطة والمبادرات</h5>
+              <p class="card-text">حملة "تصدق ولو بدينار" تهدف إلى دعم صندوق الزكاة من خلال تشجيع المجتمع على التبرع بمبالغ بسيطة</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/photo_2024-08-15_02-13-42.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">إنجازات بارزة</h5>
+              <p class="card-text">ساهم مكتب الزكاة في تحسين حياة آلاف الأسر من خلال مبادرات مبتكرة، جمع تبرعات مؤثرة</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+        </section>     
+        <div class="container-wrapper">
+          <section class="registration" id="registration">
+            <h1>تسجيل المحتاجين</h1>
+          </section>
+          <div class="content-container">
+            <div class="image-section">
+              <img src="img/صندوق الزكاة الليبي.jpg" alt="صندوق الزكاة الليبي">
+            </div>
+            <div class="form-section">
+              <h4>نموذج تسجيل المحتاجين</h4>
+              <div class="form-floating mb-3">
+                <label for="floatingName">الاسم</label>
+                <input type="text" class="form-control" id="floatingName" placeholder="الاسم">
+              </div>
+              <div class="form-floating mb-3">
+                <label for="floatingAge">العمر</label>
+                <input type="number" class="form-control" id="floatingAge" placeholder="العمر">
+              </div>
+              <div class="form-floating mb-3">
+                <label for="floatingCity">المدينة</label>
+                <input type="text" class="form-control" id="floatingCity" placeholder="المدينة">
+              </div>
+              <div class="form-floating mb-3">
+                <label for="floatingFamilyMembers">عدد أفراد الأسرة</label>
+                <input type="number" class="form-control" id="floatingFamilyMembers" placeholder="عدد أفراد الأسرة">
+              </div>
+              <div class="form-floating mb-3">
+                <label for="floatingFamilyPhoto">صورة الوضع العائلي</label>
+                <input type="file" class="form-control" id="floatingFamilyPhoto" placeholder="صورة الوضع العائلي">
+              </div>
+              <div class="form-floating">
+                <label for="floatingTextarea2">تعليقات</label>
+                <textarea class="form-control" placeholder="تعليقات" id="floatingTextarea2" style="height: 100px"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary send">الإرسال</button>
+            </div>
+          </div>
+        </div>
+      <section class="about" id="about">
+        <h1>معلومات عنا</h1>
+    </section>
+    <div class="container">
+      
+        <section class="section">
+            <h2>من نحن</h2>
+            <p>نحن مكتب الزكاة، نعمل على جمع وتوزيع الزكاة بشفافية وعدالة للمساهمة في تحسين حياة المحتاجين والمساهمة في تنمية المجتمع.</p>
+        </section>
+        <section class="section">
+            <h2>رسالتنا ورؤيتنا</h2>
+            <p>رسالتنا هي دعم الفقراء والمحتاجين من خلال الزكاة، ورؤيتنا هي خلق مجتمع تسوده العدالة الاجتماعية والتكافل.</p>
+        </section>
+        <section class="section">
+            <h2>أهدافنا</h2>
+            <ul>
+                <li>تعزيز الوعي بأهمية الزكاة.</li>
+                <li>توزيع الزكاة على المستحقين بشكل عادل وشفاف.</li>
+                <li>تقديم المساعدة للأسر المحتاجة ودعمهم لتحسين ظروفهم المعيشية.</li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>فريق العمل</h2>
+            <p>يضم فريقنا مجموعة من الأفراد المتفانين الذين يعملون بشغف لخدمة المجتمع وضمان توزيع الزكاة بشكل صحيح وفعّال.</p>
+        </section>
+    </div>
+    <section class="contact-us" id="contact-us">
+      <div class="section-header">
+        <h1>تواصل معنا</h1>
+      </div>
+      <div class="contact-container">
+        <form action="submit_form.php" method="post">
+          <label for="name">الاسم الكامل</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">رسالتك</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">إرسال</button>
+        </form>
+      </div>
+    </section>
+     
+    <section class="contact-section">
+      <div class="contact-info">
+        <h4>مركز الاتصال</h4>
+        <div class="contact-card">
+          <div class="icon-circle">
+            <i class="fa fa-phone-alt"></i>
+          </div>
+          <div class="contact-details">
+            <p><strong>رقم الهاتف:</strong> 5359669 094</p>
+            <p><strong>رقم الهاتف:</strong> 5983626 092</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="account-info">
+        <h4>أرقام حساب الزكاة</h4>
+        <div class="contact-card">
+          <div class="icon-circle">
+            <i class="fa fa-university"></i> <!-- أيقونة مخصصة للحسابات -->
+          </div>
+          <div class="contact-details">
+            <p><strong>رقم الحساب الخاص بجمع الزكاة بمصرف الجمهورية فرع الجميل:</strong> <span class="account-number">(109 210 155)</span></p>
+            <p><strong>رقم الحساب الخاص بجمع الزكاة بمصرف الصحاري فرع الجميل:</strong> <span class="account-number">(24284)</span></p>
+            <p><strong>رقم الحساب الخاص بجمع الزكاة بمصرف الجمهورية فرع الجميل:</strong> <span class="account-number">(130 210 155)</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <!-- قسم روابط التنقل -->
+      <div class="footer-section footer-links">
+        <a href="#home">الرئيسية</a>
+        <a href="#contact-us">اتصل بنا</a>
+      </div>
+    
+      <!-- قسم روابط التواصل الاجتماعي -->
+      <div class="footer-section social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100080334672686&mibextid=ZbWKwL" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/yourphonenumber" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      </div>
+    
+      <!-- قسم العنوان -->
+      <div class="footer-center">
+        <p>العنوان: مدينة الجميل، الشارع الرئيسي</p>
+      </div>
+    
+      <!-- قسم المصمم -->
+      <div class="footer-section designer">
+        <p class="designer-name">تصميم وتنفيذ : منار مصطفى الجحاوي</p>
+      </div>
+    
+      <!-- قسم حقوق النشر -->
+      <div class="footer-section">
+        <p>صندوق الزكاة - جميع الحقوق محفوظة &copy; 2024</p>
+      </div>
+    </footer>
+   </body> 
+</html>
